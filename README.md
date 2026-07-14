@@ -118,7 +118,7 @@ La clase `Person` representará a una persona mediante los siguientes atributos:
 
 # Registro de desarrollo
 
-## Paso 1 · Configuración del proyecto
+## ⌱Paso 1 · Configuración del proyecto
 
 ### Objetivo
 
@@ -141,25 +141,25 @@ Preparar el entorno de desarrollo para comenzar la implementación del modelo.
 
 ---
 
-## Paso 2 · Implementación del modelo Person
+## ⌱Paso 2 · Implementación del modelo Person
 
 > Pendiente.
 
 ---
 
-## Paso 3 · Constructor
+## ⌱Paso 3 · Constructor
 
 > Pendiente.
 
 ---
 
-## Paso 4 · Cálculo automático de la edad
+## ⌱Paso 4 · Cálculo automático de la edad
 
 > Pendiente.
 
 ---
 
-## Paso 5 · Testing
+## ⌱Paso 5 · Testing
 
 > Pendiente.
 
@@ -218,7 +218,7 @@ Durante el desarrollo del proyecto se seguirá una estrategia basada en ramas **
 
 ---
 
-## 👩‍💻 Developer Notes
+## Developer Notes
 
 > Todo empezó modelando una persona.
 >
