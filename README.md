@@ -143,7 +143,32 @@ Preparar el entorno de desarrollo para comenzar la implementación del modelo.
 
 ## ⌱Paso 2 · Implementación del modelo Person
 
-> Pendiente.
+## Paso 2 · Implementación del modelo Person
+
+### Objetivo
+
+Crear la clase `Person` e implementar el primer comportamiento del modelo siguiendo la metodología TDD.
+
+### Requisito
+
+Una persona debe almacenar correctamente el nombre recibido mediante el constructor y permitir acceder a él mediante un método getter.
+
+### Desarrollo
+
+1. Se escribió el primer test unitario para verificar que el atributo `name` se almacenaba correctamente.
+2. Se ejecutó el comando:
+
+```bash
+mvn clean test
+```
+
+3. La compilación falló porque la clase `Person` todavía no existía.
+4. Se implementó la clase `Person` con el constructor y el método `getName()`.
+5. Se volvió a ejecutar la batería de pruebas obteniendo un resultado satisfactorio.
+
+**Estado**
+
+✔︎  Completado
 
 ---
 
