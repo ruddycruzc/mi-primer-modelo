@@ -105,8 +105,8 @@ La clase `Person` representará a una persona mediante los siguientes atributos:
 ## Criterios de evaluación
 
 - [x] Configuración del proyecto
-- [ ] Implementación de la clase `Person`
-- [ ] Constructor
+- [x] Implementación de la clase `Person`
+- [x] Constructor
 - [ ] Cálculo automático de la edad
 - [ ] Tests unitarios
 - [ ] Cobertura superior al 70%
@@ -142,8 +142,6 @@ Preparar el entorno de desarrollo para comenzar la implementación del modelo.
 ---
 
 ## ⌱Paso 2 · Implementación del modelo Person
-
-## Paso 2 · Implementación del modelo Person
 
 ### Objetivo
 
@@ -194,8 +192,8 @@ mvn clean test
 
 | Caso de prueba | Estado |
 |----------------|--------|
-| Constructor | - |
-| Nombre | - |
+| Constructor |✓ |
+| Nombre | ✓|
 | Apellido | - |
 | Documento de identidad | - |
 | Año de nacimiento | - |
