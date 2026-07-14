@@ -168,6 +168,14 @@ mvn clean test
 
 ✔︎  Completado
 
+### Ampliación
+
+Se añadió el atributo `surname` al modelo y su correspondiente método `getSurname()`. Se creó un nuevo test unitario para verificar que el apellido se inicializa correctamente mediante el constructor.
+
+**Resultado**
+
+El nuevo comportamiento supera correctamente todas las pruebas.
+
 ---
 
 ## ⌱Paso 3 · Constructor
