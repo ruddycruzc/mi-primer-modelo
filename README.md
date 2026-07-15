@@ -30,8 +30,6 @@
 - JUnit
 - Hamcrest
 
----
-
 ## Ejercicio
 
 Modelar el concepto de una persona.
@@ -48,7 +46,7 @@ La clase deberá disponer de un constructor que inicialice todos los atributos n
 
 No es necesaria ninguna salida por consola.
 
----
+
 
 ## Tecnologías utilizadas
 
@@ -58,9 +56,9 @@ No es necesaria ninguna salida por consola.
 | Maven | 3.x |
 | JUnit | 5.9.2 |
 | Hamcrest | 3.0 |
-| JaCoCo | 0.8.14 |
+| JaCoCo | 0.8.4 |
 
----
+
 
 ## Estructura del proyecto
 
@@ -77,7 +75,6 @@ mi-primer-modelo
 └── README.md
 ```
 
----
 
 # Modelo de la entidad
 
@@ -89,7 +86,7 @@ La clase `Person` representará a una persona mediante los siguientes atributos:
 - Año de nacimiento
 - Edad (calculada automáticamente)
 
----
+
 
 ## Estado del proyecto
 
@@ -141,7 +138,7 @@ Preparar el entorno de desarrollo para comenzar la implementación del modelo.
 
 ✔︎ Completado
 
----
+
 
 ## ⌱Paso 2 · Implementación del modelo Person
 
@@ -170,7 +167,7 @@ mvn clean test
 
 ✔︎  Completado
 
----
+
 
 ## ⌱Paso 3 · Implementación de atributos
 
@@ -196,7 +193,7 @@ Cada incorporación incluyó:
 
 ✔︎ Completado
 
----
+
 
 ## ⌱Paso 4 · Cálculo automático de la edad
 
@@ -219,7 +216,7 @@ La edad no debe recibirse mediante el constructor, sino calcularse automáticame
 
 Completado
 
----
+
 ### Decisiones de implementación
 
 Para calcular la edad se utilizó la clase `LocalDate` del paquete `java.time`, obteniendo dinámicamente el año actual mediante:
@@ -232,7 +229,7 @@ De esta forma, el cálculo de la edad permanece actualizado cada año sin necesi
 
 El método `calculateAge()` se declaró con visibilidad `private`, ya que únicamente es utilizado por la propia clase durante la creación del objeto, favoreciendo así el principio de encapsulación.
 
----
+
 
 ## ⌱ Paso 5 · Testing y cobertura
 
@@ -269,7 +266,6 @@ Verificar el correcto funcionamiento del modelo mediante pruebas unitarias y com
 
 El proyecto alcanza una cobertura superior al **70%**, cumpliendo el requisito establecido para la práctica.
 
-### Captura
 
 ![Cobertura](./docs/images/coverage.png)
 
