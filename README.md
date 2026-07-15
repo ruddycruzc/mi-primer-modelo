@@ -95,10 +95,12 @@ La clase `Person` representará a una persona mediante los siguientes atributos:
 
 | Estado | Valor |
 |---------|-------|
-| Desarrollo | - En progreso |
+| Desarrollo | ✔ Completada |
+| Funcionalidad | ✔ Completada |
+| Documentación | - En progreso |
 | Metodología | Test Driven Development (TDD) |
 | Java | 21 |
-| Cobertura mínima requerida | 70% |
+| Cobertura mínima requerida | Superior al 70% ✔ Completada |
 
 ---
 
@@ -107,12 +109,12 @@ La clase `Person` representará a una persona mediante los siguientes atributos:
 - [x] Configuración del proyecto
 - [x] Implementación de la clase `Person`
 - [x] Constructor
-- [ ] Cálculo automático de la edad
-- [ ] Tests unitarios
-- [ ] Cobertura superior al 70%
-- [ ] Diagrama UML
-- [ ] Capturas de pantalla
-- [ ] Documentación completa
+- [x] Cálculo automático de la edad
+- [x] Tests unitarios
+- [x] Cobertura superior al 70%
+- [x] Diagrama UML
+- [x] Capturas de pantalla
+- [x] Documentación completa
 
 ---
 
@@ -168,31 +170,86 @@ mvn clean test
 
 ✔︎  Completado
 
-### Ampliación
-
-Se añadió el atributo `surname` al modelo y su correspondiente método `getSurname()`. Se creó un nuevo test unitario para verificar que el apellido se inicializa correctamente mediante el constructor.
-
-**Resultado**
-
-El nuevo comportamiento supera correctamente todas las pruebas.
-
 ---
 
-## ⌱Paso 3 · Constructor
+## ⌱Paso 3 · Implementación de atributos
 
-> Pendiente.
+### Objetivo
+
+Completar el modelo incorporando el resto de atributos definidos en el enunciado.
+
+### Desarrollo
+
+Se añadieron progresivamente los siguientes atributos al modelo, aplicando un ciclo TDD para cada uno de ellos:
+
+- `surname`
+- `identityDocument`
+- `birthYear`
+
+Cada incorporación incluyó:
+
+- Creación del test correspondiente.
+- Implementación del getter necesario.
+- Ejecución de la batería de pruebas para verificar el comportamiento esperado.
+
+**Estado**
+
+✔︎ Completado
 
 ---
 
 ## ⌱Paso 4 · Cálculo automático de la edad
 
-> Pendiente.
+### Objetivo
+
+Implementar el cálculo automático de la edad a partir del año de nacimiento mediante un método privado, utilizando la API `java.time` para obtener el año actual.
+
+### Requisito
+
+La edad no debe recibirse mediante el constructor, sino calcularse automáticamente utilizando un método específico.
+
+### Desarrollo
+
+1. Se creó un nuevo test unitario para verificar el cálculo de la edad.
+2. Se implementó un método privado `calculateAge()` responsable de calcular automáticamente la edad a partir del año de nacimiento.
+3. El constructor inicializa el atributo `age` utilizando dicho método.
+4. Se añadió el método `getAge()` para acceder al valor calculado.
+
+**Estado**
+
+Completado
+
+---
+### Decisiones de implementación
+
+Para calcular la edad se utilizó la clase `LocalDate` del paquete `java.time`, obteniendo dinámicamente el año actual mediante:
+
+```java
+LocalDate.now().getYear()
+```
+
+De esta forma, el cálculo de la edad permanece actualizado cada año sin necesidad de modificar el código.
+
+El método `calculateAge()` se declaró con visibilidad `private`, ya que únicamente es utilizado por la propia clase durante la creación del objeto, favoreciendo así el principio de encapsulación.
 
 ---
 
-## ⌱Paso 5 · Testing
+## ⌱ Paso 5 · Testing y cobertura
 
-> Pendiente.
+### Objetivo
+
+Verificar el correcto funcionamiento del modelo mediante pruebas unitarias y comprobar que se alcanza la cobertura mínima exigida.
+
+### Desarrollo
+
+- Se implementaron pruebas unitarias para todos los comportamientos del modelo.
+- Se verificó el correcto funcionamiento mediante `mvn clean test`.
+- Se generó el informe de cobertura utilizando JaCoCo.
+- Se revisó la cobertura desde la pestaña **Testing** de Visual Studio Code.
+
+**Estado**
+
+✔︎ Completado
 
 ---
 
@@ -202,38 +259,29 @@ El nuevo comportamiento supera correctamente todas las pruebas.
 |----------------|--------|
 | Constructor |✓ |
 | Nombre | ✓|
-| Apellido | - |
-| Documento de identidad | - |
-| Año de nacimiento | - |
-| Edad calculada | - |
+| Apellido | ✓ |
+| Documento de identidad | ✓ |
+| Año de nacimiento | ✓ |
+| Edad calculada | ✓ |
 
 ---
-
 ## Cobertura de pruebas
 
-> Pendiente.
+El proyecto alcanza una cobertura superior al **70%**, cumpliendo el requisito establecido para la práctica.
+
+### Captura
+
+![Cobertura](./docs/images/coverage.png)
+
+![Tests](./docs/images/test.png)
 
 ---
 
 ## UML
 
-> Pendiente.
+El siguiente diagrama representa la estructura final de la clase `Person`.
 
----
-
-## Capturas
-
-### Tests
-
-> Pendiente.
-
-### Cobertura
-
-> Pendiente.
-
-### UML
-
-> Pendiente.
+![Diagrama UML](./docs/diagrams/diagram.png)
 
 ---
 
@@ -245,15 +293,9 @@ Durante el desarrollo del proyecto se seguirá una estrategia basada en ramas **
 
 ## Conclusiones
 
-> Se completará una vez finalizada la práctica.
+Este proyecto ha permitido reforzar conceptos fundamentales de Programación Orientada a Objetos mediante el modelado de una entidad sencilla.
 
----
-
-## Developer Notes
-
-> Todo empezó modelando una persona.
->
-> Si el README acaba teniendo más líneas que la propia clase `Person`, prometo que ha sido por motivos educativos.
+Además, se ha aplicado la metodología **Test Driven Development (TDD)** para desarrollar cada comportamiento de forma incremental, verificando su funcionamiento mediante pruebas unitarias y alcanzando la cobertura mínima requerida.
 
 ---
 
@@ -262,3 +304,13 @@ Durante el desarrollo del proyecto se seguirá una estrategia basada en ramas **
 | Nombre | GitHub |
 |---------|--------|
 | **Ruddy P. Cruz Campoverde** | https://github.com/ruddycruzc |
+
+---
+
+>##### Developer Notes
+>
+> Todo empezó modelando una persona.
+>
+> Si el README acaba teniendo más líneas que la propia clase `Person`, prometo que ha sido por motivos educativos.
+
+---
