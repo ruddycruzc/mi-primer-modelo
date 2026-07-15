@@ -170,11 +170,25 @@ mvn clean test
 
 ### Ampliación
 
-Se añadió el atributo `surname` al modelo y su correspondiente método `getSurname()`. Se creó un nuevo test unitario para verificar que el apellido se inicializa correctamente mediante el constructor.
+- Se añadió el atributo `surname` al modelo y su correspondiente método `getSurname()`. Se creó un nuevo test unitario para verificar que el apellido se inicializa correctamente mediante el constructor.
 
 **Resultado**
 
 El nuevo comportamiento supera correctamente todas las pruebas.
+
+---
+- Se incorporó el atributo `identityDocument` al modelo y se implementó su método `getIdentityDocument()`. Se añadió un nuevo test unitario para comprobar que el documento de identidad se almacena correctamente al crear una instancia de `Person`.
+
+**Resultado**
+
+Todos los tests continúan superándose correctamente.
+
+---
+- Se añadió el atributo `birthYear` junto con su método `getBirthYear()`.Se incorporó un nuevo test unitario para verificar que el año de nacimiento se almacena correctamente al crear una instancia de la clase `Person`.
+
+**Resultado**
+
+Todos los tests continúan superándose correctamente.
 
 ---
 
