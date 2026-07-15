@@ -96,9 +96,11 @@ La clase `Person` representará a una persona mediante los siguientes atributos:
 | Estado | Valor |
 |---------|-------|
 | Desarrollo | - En progreso |
+| Funcionalidad | ✔ Completada |
+| Documentación | - En progreso |
 | Metodología | Test Driven Development (TDD) |
 | Java | 21 |
-| Cobertura mínima requerida | 70% |
+| Cobertura mínima requerida | 70% - En progreso |
 
 ---
 
@@ -107,8 +109,8 @@ La clase `Person` representará a una persona mediante los siguientes atributos:
 - [x] Configuración del proyecto
 - [x] Implementación de la clase `Person`
 - [x] Constructor
-- [ ] Cálculo automático de la edad
-- [ ] Tests unitarios
+- [x] Cálculo automático de la edad
+- [x] Tests unitarios
 - [ ] Cobertura superior al 70%
 - [ ] Diagrama UML
 - [ ] Capturas de pantalla
@@ -168,39 +170,67 @@ mvn clean test
 
 ✔︎  Completado
 
-### Ampliación
-
-- Se añadió el atributo `surname` al modelo y su correspondiente método `getSurname()`. Se creó un nuevo test unitario para verificar que el apellido se inicializa correctamente mediante el constructor.
-
-**Resultado**
-
-El nuevo comportamiento supera correctamente todas las pruebas.
-
----
-- Se incorporó el atributo `identityDocument` al modelo y se implementó su método `getIdentityDocument()`. Se añadió un nuevo test unitario para comprobar que el documento de identidad se almacena correctamente al crear una instancia de `Person`.
-
-**Resultado**
-
-Todos los tests continúan superándose correctamente.
-
----
-- Se añadió el atributo `birthYear` junto con su método `getBirthYear()`.Se incorporó un nuevo test unitario para verificar que el año de nacimiento se almacena correctamente al crear una instancia de la clase `Person`.
-
-**Resultado**
-
-Todos los tests continúan superándose correctamente.
-
 ---
 
-## ⌱Paso 3 · Constructor
+## ⌱Paso 3 · Implementación de atributos
 
-> Pendiente.
+### Objetivo
+
+Completar el modelo incorporando el resto de atributos definidos en el enunciado.
+
+### Desarrollo
+
+Se añadieron progresivamente los siguientes atributos al modelo, aplicando un ciclo TDD para cada uno de ellos:
+
+- `surname`
+- `identityDocument`
+- `birthYear`
+
+Cada incorporación incluyó:
+
+- Creación del test correspondiente.
+- Implementación del getter necesario.
+- Ejecución de la batería de pruebas para verificar el comportamiento esperado.
+
+**Estado**
+
+✔︎ Completado
 
 ---
 
 ## ⌱Paso 4 · Cálculo automático de la edad
 
-> Pendiente.
+### Objetivo
+
+Implementar el cálculo automático de la edad a partir del año de nacimiento mediante un método privado, utilizando la API `java.time` para obtener el año actual.
+
+### Requisito
+
+La edad no debe recibirse mediante el constructor, sino calcularse automáticamente utilizando un método específico.
+
+### Desarrollo
+
+1. Se creó un nuevo test unitario para verificar el cálculo de la edad.
+2. Se implementó un método privado `calculateAge()` responsable de calcular automáticamente la edad a partir del año de nacimiento.
+3. El constructor inicializa el atributo `age` utilizando dicho método.
+4. Se añadió el método `getAge()` para acceder al valor calculado.
+
+**Estado**
+
+Completado
+
+---
+### Decisiones de implementación
+
+Para calcular la edad se utilizó la clase `LocalDate` del paquete `java.time`, obteniendo dinámicamente el año actual mediante:
+
+```java
+LocalDate.now().getYear()
+```
+
+De esta forma, el cálculo de la edad permanece actualizado cada año sin necesidad de modificar el código.
+
+El método `calculateAge()` se declaró con visibilidad `private`, ya que únicamente es utilizado por la propia clase durante la creación del objeto, favoreciendo así el principio de encapsulación.
 
 ---
 
@@ -216,10 +246,10 @@ Todos los tests continúan superándose correctamente.
 |----------------|--------|
 | Constructor |✓ |
 | Nombre | ✓|
-| Apellido | - |
-| Documento de identidad | - |
-| Año de nacimiento | - |
-| Edad calculada | - |
+| Apellido | ✓ |
+| Documento de identidad | ✓ |
+| Año de nacimiento | ✓ |
+| Edad calculada | ✓ |
 
 ---
 
