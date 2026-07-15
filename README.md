@@ -95,12 +95,12 @@ La clase `Person` representará a una persona mediante los siguientes atributos:
 
 | Estado | Valor |
 |---------|-------|
-| Desarrollo | - En progreso |
+| Desarrollo | ✔ Completada |
 | Funcionalidad | ✔ Completada |
 | Documentación | - En progreso |
 | Metodología | Test Driven Development (TDD) |
 | Java | 21 |
-| Cobertura mínima requerida | 70% - En progreso |
+| Cobertura mínima requerida | Superior al 70% ✔ Completada |
 
 ---
 
@@ -111,10 +111,10 @@ La clase `Person` representará a una persona mediante los siguientes atributos:
 - [x] Constructor
 - [x] Cálculo automático de la edad
 - [x] Tests unitarios
-- [ ] Cobertura superior al 70%
-- [ ] Diagrama UML
-- [ ] Capturas de pantalla
-- [ ] Documentación completa
+- [x] Cobertura superior al 70%
+- [x] Diagrama UML
+- [x] Capturas de pantalla
+- [x] Documentación completa
 
 ---
 
@@ -234,9 +234,22 @@ El método `calculateAge()` se declaró con visibilidad `private`, ya que única
 
 ---
 
-## ⌱Paso 5 · Testing
+## ⌱ Paso 5 · Testing y cobertura
 
-> Pendiente.
+### Objetivo
+
+Verificar el correcto funcionamiento del modelo mediante pruebas unitarias y comprobar que se alcanza la cobertura mínima exigida.
+
+### Desarrollo
+
+- Se implementaron pruebas unitarias para todos los comportamientos del modelo.
+- Se verificó el correcto funcionamiento mediante `mvn clean test`.
+- Se generó el informe de cobertura utilizando JaCoCo.
+- Se revisó la cobertura desde la pestaña **Testing** de Visual Studio Code.
+
+**Estado**
+
+✔︎ Completado
 
 ---
 
@@ -252,32 +265,23 @@ El método `calculateAge()` se declaró con visibilidad `private`, ya que única
 | Edad calculada | ✓ |
 
 ---
-
 ## Cobertura de pruebas
 
-> Pendiente.
+El proyecto alcanza una cobertura superior al **70%**, cumpliendo el requisito establecido para la práctica.
+
+### Captura
+
+![Cobertura](./docs/images/coverage.png)
+
+![Tests](./docs/images/test.png)
 
 ---
 
 ## UML
 
-> Pendiente.
+El siguiente diagrama representa la estructura final de la clase `Person`.
 
----
-
-## Capturas
-
-### Tests
-
-> Pendiente.
-
-### Cobertura
-
-> Pendiente.
-
-### UML
-
-> Pendiente.
+![Diagrama UML](./docs/diagrams/diagram.png)
 
 ---
 
@@ -289,15 +293,9 @@ Durante el desarrollo del proyecto se seguirá una estrategia basada en ramas **
 
 ## Conclusiones
 
-> Se completará una vez finalizada la práctica.
+Este proyecto ha permitido reforzar conceptos fundamentales de Programación Orientada a Objetos mediante el modelado de una entidad sencilla.
 
----
-
-## Developer Notes
-
-> Todo empezó modelando una persona.
->
-> Si el README acaba teniendo más líneas que la propia clase `Person`, prometo que ha sido por motivos educativos.
+Además, se ha aplicado la metodología **Test Driven Development (TDD)** para desarrollar cada comportamiento de forma incremental, verificando su funcionamiento mediante pruebas unitarias y alcanzando la cobertura mínima requerida.
 
 ---
 
@@ -306,3 +304,13 @@ Durante el desarrollo del proyecto se seguirá una estrategia basada en ramas **
 | Nombre | GitHub |
 |---------|--------|
 | **Ruddy P. Cruz Campoverde** | https://github.com/ruddycruzc |
+
+---
+
+>##### Developer Notes
+>
+> Todo empezó modelando una persona.
+>
+> Si el README acaba teniendo más líneas que la propia clase `Person`, prometo que ha sido por motivos educativos.
+
+---
